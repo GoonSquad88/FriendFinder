@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+  <title>Survey</title>
+</head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Survey Questions</h1>
+    </div>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Link to Photo Image</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+  </form>
+
+  <br>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Communication the most important part of your relationship.</label>
+    <select class="form-control" id="Q1">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">He/She must get along with your parents.</label>
+    <select class="form-control" id="Q2">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Your partner must have goals they want to accomplish and are in the process of accomplishing those goals.</label>
+    <select class="form-control" id="Q3">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">A perfect date night is staying at home with your partner watching moives/Netflix and eating your favorite food(s).</label>
+    <select class="form-control" id="Q4">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Your partner must have his/her shit together.</label>
+    <select class="form-control" id="Q5">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">You value the soul of your partner rather than the size of their wallet.</label>
+    <select class="form-control" id="Q6">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Your partner must be good in bed.</label>
+    <select class="form-control" id="Q7">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">You prefer your partner to take control in the toughest of situations.</label>
+    <select class="form-control" id="Q8">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">They must cherish family values above all.</label>
+    <select class="form-control" id="Q9">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">You must be the focus of your partners life or else you are out of the relationship.</label>
+    <select class="form-control" id="Q10">
+      <option>1 (Strongly Disagree)</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5(Strongly Agree)</option>
+    </select>
+  </div>
+
+  <br><br>
+
+  <button type="button" class="btn btn-secondary btn-lg btn-block" id="submit">Submit</button>
+
+  <br><br>
+
+  
+
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body">
+          
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script type="text/javascript">
+  $("#submit").on("click", function(event) {
+   
+    function formValidate() {
+      var isValid = true;
+      $(".form-control").each(function() {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+    if (formValidate()) {
+      var userData = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: [
+          $("#Q1").val(),
+          $("#Q2").val(),
+          $("#Q3").val(),
+          $("#Q4").val(),
+          $("#Q5").val(),
+          $("#Q6").val(),
+          $("#Q7").val(),
+          $("#Q8").val(),
+          $("#Q9").val(),
+          $("#Q10").val()
+        ]
+      };
+
+      $.post("/api/friends", userData, function(data) {
+        console.log(data);
+        $("#match-name").text(data.name);
+        $("#match-img").attr("src", data.photo);
+
+        $("#results-modal").modal("toggle");
+       
+      });
+    } else {
+      alert("Please fill out form before submiting.");
+    }
+    return false;
+  });
+
+</script>
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+   
+</body>
+
+</html>
